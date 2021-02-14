@@ -153,7 +153,7 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   // Solution code here...
   let tmp=[];
-  availableItems.forEach((element,index) => {
+  arr.forEach((element,index) => {
     if(element%3==0){
       tmp[index]="fizz";
     }//end if
