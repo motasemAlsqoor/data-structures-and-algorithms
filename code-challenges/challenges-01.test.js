@@ -127,9 +127,9 @@ const createList = (availableItems) => {
   let tmp=[];
   availableItems.forEach((element,index) => {
     if(element.available==true){
-      tmp[index]=element.name;
-      console.log(element.name)
+      tmp.push(element.name);
     }//end if
+
     
   });
   return tmp;
