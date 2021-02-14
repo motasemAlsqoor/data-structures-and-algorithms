@@ -151,6 +151,22 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let tmp=[];
+  availableItems.forEach((element,index) => {
+    if(element%3==0){
+      tmp[index]="fizz";
+    }//end if
+    else if(element%5==0){
+      tmp[index]="Buzz";
+    }//end if
+    else if(element%5==0 && element%3==0){
+      tmp[index]="Fizz Buzz";
+    }//end if
+    else{
+      tmp[index]=element;
+    } 
+  });
+  return tmp;
 };
 
 /* ------------------------------------------------------------------------------------------------
