@@ -12,8 +12,9 @@ const addOne = (arr) => {
   // Solution code here...
   let tmp={};
   arr.array.forEach((element,index) => {
-    tmp[i]=element+1;
+    tmp[index]=element+1;
   });
+  return tmp;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,6 +27,11 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
+  let tmp={};
+  arr.array.forEach((element,index) => {
+    tmp[index]+='!';
+  });
+  return tmp;
 };
 
 /* ------------------------------------------------------------------------------------------------
