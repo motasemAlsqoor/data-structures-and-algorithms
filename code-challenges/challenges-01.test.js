@@ -155,16 +155,16 @@ const fizzbuzz = (arr) => {
   let tmp=[];
   arr.forEach((element,index) => {
     if(element%3==0){
-      tmp[index]="fizz";
+      tmp.push("fizz");
     }//end if
     else if(element%5==0){
-      tmp[index]="Buzz";
+      tmp.push("Buzz");
     }//end if
     else if(element%5==0 && element%3==0){
-      tmp[index]="Fizz Buzz";
+      tmp.push("Fizz Buzz");
     }//end if
     else{
-      tmp[index]=element;
+      tmp.push(element);
     } 
   });
   return tmp;
