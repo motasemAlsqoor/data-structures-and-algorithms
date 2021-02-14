@@ -154,13 +154,13 @@ const fizzbuzz = (arr) => {
   // Solution code here...
   let tmp=[];
   arr.forEach((element,index) => {
-    if(element%3==0){
+    if(element%3===0){
       tmp.push("fizz");
     }//end if
-    else if(element%5==0){
+    else if(element%5===0){
       tmp.push("Buzz");
     }//end if
-    else if(element%5==0 && element%3==0){
+    else if(element%5===0 && element%3===0){
       tmp.push("Fizz Buzz");
     }//end if
     else{
