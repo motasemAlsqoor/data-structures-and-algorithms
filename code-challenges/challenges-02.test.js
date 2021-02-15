@@ -82,6 +82,10 @@ console.log(people[1].isAuthor) prints true
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
+  for (let index = 0; index < people.length; index++) {
+    people[index].isAuthor=ture;
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
