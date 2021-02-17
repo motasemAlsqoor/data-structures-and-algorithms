@@ -10,7 +10,7 @@ const addTwo = (arr) => {
   // Solution code here...
   var temp=[];
   for (let index = 0; index < arr.length; index++) {
-    temp.push([index]+2);
+    temp.push(arr[index]+2);
     
   }
   return temp;
@@ -61,23 +61,37 @@ const containsWorld = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
+Write a function named isCapitalized that takes in a string. This function should use a 
+regular expression pattern to match all words that begin with a capital letter.
+ It should only match words, not punctuation.
 
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex=/\b[A-Z][A-Za-z]+\b/g;
+  var s=str.match(regex);
+  return s==null?[]:s;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
+Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern 
+to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let temp=[];
+  let regex=/^[A-J]\w*/;
+
+  for (let index = 0; index < arr.length; index++) {
+    if(regex.test(arr[index])){
+      temp.push(arr[index]);
+    } 
+  }
+  return temp;
 };
 
 /* ------------------------------------------------------------------------------------------------
