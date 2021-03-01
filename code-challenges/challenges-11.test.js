@@ -75,7 +75,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
-  return /\b\w+@(\w+(.net|.com|.org))\b/.test(email);
+  return /\b[a-z]+(\.[a-z]+)?@[a-z]+\.(com|net|org)\b/y.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,6 +97,9 @@ Acceptable formats include:
 Your function should include a single regular expression pattern that matches any of these formats.
 
 Return either true or false.
+//there should be 10 digit in the number 
+// it can be space or - to divide the number into three group like ddd-ddd-dddd
+
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
